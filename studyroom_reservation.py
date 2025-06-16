@@ -35,7 +35,7 @@ class StudyRoom:
 
     def PostReserve(self, postData: dict, roomName: str, event: threading.Event):
         retries = 0
-        max_retries = 5  # 最大重试次数
+        max_retries = 2  # 最大重试次数
         while retries < max_retries:
             try:
                 with self.lock:
@@ -66,10 +66,14 @@ class StudyRoom:
         self.resvMember = [self.accNo]
         if 'other_ids' in self.room_info:
             for other_id in self.room_info['other_ids']:
-                self.resvMember.append(
-                    self.session.get(f'http://libbooking.gzhu.edu.cn/ic-web/account/getMembers?key={other_id}&page=1'
-                                     f'&pageNum=10').json().get('data')[0].get('accNo')
-                )
+                try:
+                    self.resvMember.append(
+                        self.session.get(f'http://libbooking.gzhu.edu.cn/ic-web/account/getMembers?key={other_id}&page=1'
+                                         f'&pageNum=10').json().get('data')[0].get('accNo')
+                    )
+                except TypeError as e:
+                    print(f"{self.username}的other_ids中有错误的ID: {other_id}")
+                    continue
         all_time = self.room_info['time']
         select_day = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
         week_index = (datetime.datetime.now() + datetime.timedelta(days=3)).strftime('%A')

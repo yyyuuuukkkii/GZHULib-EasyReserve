@@ -18,7 +18,7 @@
 - `requirements.txt` - Python依赖包列表
 
 ### 数据文件
-- `campus.db` - SQLite数据库文件
+- `campus.db` - 图书馆座位、房间和校区数据库文件
 - `room_csv/` - 座位编码数据目录
 
 ### 自动化配置
@@ -48,6 +48,12 @@
      - 将 `other_ids` 改为其他用户的学号(可选，一些研讨室需要多个用户)
 4. 将配置好的信息粘贴到https://www.bejson.com 中校验是否格式正确
 5. 确认格式正确后点击"Commit changes"保存修改
+
+### 3️⃣ 查看GitHub Actions
+在你的仓库中确认Actions是否正常运行：
+1. 点击页面上方的 "Actions" 标签
+2. 查看是否有 `AUTO-ROOM`、`AUTO-SEAT` 和 `AUTO-SIGN` 三个工作流
+3. 如果工作流运行错误，检查错误信息
 
 ## ⚠️ 注意事项
 1. 请确保你的账号密码正确

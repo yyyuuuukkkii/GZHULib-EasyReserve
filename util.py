@@ -30,7 +30,7 @@ def encrypt(password: str, public_key: str) -> str:
 
 def get_userConfig(cursor: Cursor, isSeat=True) -> List[Dict[str, Any]]:
     import json
-    with open('user_config_example.json', 'r', encoding='utf-8') as f:
+    with open('user_config.json', 'r', encoding='utf-8') as f:
         userConfig: List[Dict[str, Any]] = json.load(f)
     valid_userConfig = []
     for user in userConfig:
