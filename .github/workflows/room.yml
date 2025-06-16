@@ -53,4 +53,4 @@ jobs:
           IC_USERNAME_XYT: ${{ secrets.IC_USERNAME_XYT }}
           IC_PASSWORD_XYT: ${{ secrets.IC_PASSWORD_XYT }}
         run: |
-          python ./StudyRoom.py
+          python ./studyroom_reservation.py

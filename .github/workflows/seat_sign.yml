@@ -40,4 +40,4 @@ jobs:
           ICPASSWORD: ${{ secrets.ICPASSWORD }}
           ICUSERNAME: ${{ secrets.ICUSERNAME }}
         run: |
-          python ./NewSign.py
+          python ./seat_sign.py

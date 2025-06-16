@@ -65,7 +65,9 @@
 如果你仍是无法使用，或者对GitHub不熟悉，可以发送邮件附带个人联系方式付费咨询，或者付费让作者帮忙预约，联系方式`gomorebug@gmail.com`
 
 ## 后文
-由于Github Action时间上普遍不准，在设置Github WorkerFlows文件上的时间要比实际预约的时间提前半小时以上。由于Github Action的这个特征，本项目的自动签到时常失效，建议关闭签到工作流。
++ 由于Github Actions时间上普遍不准，在设置Github WorkerFlows文件上的时间要比实际预约的时间提前半小时以上。由于Github Actions的这个特征，本项目的自动签到时常失效，建议关闭签到工作流。
++ 有计算机相关知识的人可以阅读https://docs.github.com/en/actions定制化自己的工作流
++ 如果你有更好的建议或者想法，欢迎提交PR或者Issue
 
 ## 📝 免责声明
 本项目仅供学习交流使用，请勿用于商业用途。使用本程序产生的任何后果由使用者自行承担。 
