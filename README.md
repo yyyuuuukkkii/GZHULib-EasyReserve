@@ -49,11 +49,14 @@
 4. 将配置好的信息粘贴到https://www.bejson.com 中校验是否格式正确
 5. 确认格式正确后点击"Commit changes"保存修改
 
-### 3️⃣ 查看GitHub Actions
-在你的仓库中确认Actions是否正常运行：
+### 3️⃣ 启用GitHub Actions
 1. 点击页面上方的 "Actions" 标签
-2. 查看是否有 `AUTO-ROOM`、`AUTO-SEAT` 和 `AUTO-SIGN` 三个工作流
-3. 如果工作流运行错误，检查错误信息
+2. 点击 "I understand my workflows, go ahead and enable them" 按钮
+3. 查看是否有 `AUTO-ROOM`、`AUTO-SEAT` 和 `AUTO-SIGN` 三个工作流
+4. 默认是关闭所有的工作流，你可以根据需要启用相应的工作流，点击`Enable workflow`：
+   - `AUTO-ROOM` - 研讨室预约
+   - `AUTO-SEAT` - 座位预约
+   - `AUTO-SIGN` - 自动签到
 
 ## ⚠️ 注意事项
 1. 请确保你的账号密码正确
