@@ -47,10 +47,5 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./requirements.txt
       - name: 'Sign Working'
-        env:
-          ICPASSWORD: ${{ secrets.ICPASSWORD }}
-          ICUSERNAME: ${{ secrets.ICUSERNAME }}
-          IC_USERNAME_XYT: ${{ secrets.IC_USERNAME_XYT }}
-          IC_PASSWORD_XYT: ${{ secrets.IC_PASSWORD_XYT }}
         run: |
           python ./studyroom_reservation.py

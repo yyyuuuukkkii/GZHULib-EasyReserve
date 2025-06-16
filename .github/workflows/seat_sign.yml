@@ -36,8 +36,5 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./requirements.txt
       - name: 'Working'
-        env:
-          ICPASSWORD: ${{ secrets.ICPASSWORD }}
-          ICUSERNAME: ${{ secrets.ICUSERNAME }}
         run: |
           python ./seat_sign.py
